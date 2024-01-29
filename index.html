@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jagan&Nevi</title>
+  <link rel="stylesheet" href="index.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form name="myForm" action="preview.html" onsubmit="return validateForm()">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" name="fname" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" name="fpass" required>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <input type="submit" value="Login" class="btn">
+    </form>
+  </div>
+
+  <script>
+
+  function validateForm() {
+  let y = document.forms["myForm"]["fname"].value;
+  if (y != "Jagan") {
+    alert("incorrect username");
+    return false;
+  }
+  let x = document.forms["myForm"]["fpass"].value;
+  if (x != "Nevimaa") {
+    alert("incorrect password");
+    return false;
+  }
+}
+  </script>
+</body>
+</html>
